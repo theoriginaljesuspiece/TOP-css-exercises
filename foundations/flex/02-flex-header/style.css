@@ -1,6 +1,14 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  padding: 10px;
+  /*
+    - Made header container the flexbox and aligned everything horizontally
+      and vertically
+  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -11,9 +19,27 @@
   padding: 4px 32px;
 }
 
+/* 
+  - These are not needed if flex container has justify-content: space-between 
+*/
+/* .left-links {
+  margin-right: auto; 
+}
+.right-links {
+  margin-left: auto;
+} */
+
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  /*
+    - Made <ul> a flexbox so that <li> can be displayed along main axis
+    - Applied gap
+    - Remember that <ul> naturally has PADDING!!!! Had to remove it
+  */
+  display: flex;
+  gap: 20px;
+  padding: 0;
 }
 
 a {
