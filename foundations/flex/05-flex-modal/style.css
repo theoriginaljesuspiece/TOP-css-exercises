@@ -20,6 +20,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /*
+    - Applied padding and flexbox to container
+  */
+  display: flex;
+  padding: 15px;
 }
 
 .icon {
@@ -33,6 +38,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /*
+    - Flex shrink to prevent shrinkage/collapse
+    - Margin to provide spacing between icon and content
+  */
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+/*
+  - New div to apply flex column
+*/
+.interactive {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*
+  - Grouped header items together inside a new flexbox to apply space between
+*/
+.header-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+  - Apply font styling to header content
+*/
+.header {
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .close-button {
