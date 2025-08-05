@@ -2,28 +2,90 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /*
+    - Apply flex column to body
+  */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /*
+    - Align header vertically with flex
+  */
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+/*
+  - Apply flex and grow the main content to fill empty space
+*/
+.main {
+  display: flex;
+  flex: 1;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  /*
+    - Use margin from footer to push item down
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /*
+    - Remove shrinkage
+  */
+  flex-shrink: 0;
+}
+
+  /*
+    - Remove list formatting and margin, added padding
+  */
+.sidebar ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+
+/*
+  - Remove <a> decorations and apply font size
+*/
+.sidebar a {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+/*
+  - Applied flex in new container
+  - Allowed flex wrapping so another row could be formed
+*/
+.cards {
+  padding: 48px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 350px;
 }
