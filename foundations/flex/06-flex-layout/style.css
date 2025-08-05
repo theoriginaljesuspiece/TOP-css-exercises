@@ -5,6 +5,12 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /*
+    - Apply flex column to the body and space out header, footer and content
+  */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +22,10 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /*
+    - Relevant padding to buttons
+  */
+  padding: 8px 12px;
 }
 
 input {
@@ -24,3 +34,53 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+/*
+  - Apply flex to header and footer, and space out content on either side
+*/
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/*
+  - Add footer background color
+*/
+.footer {
+  background-color: #eeeeee;
+}
+
+/*
+  - Apply flex column to content div and center it on main and cross axis
+*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/*
+  - Remove default list style and padding/margin
+  - Apply flex and gap
+*/
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+/*
+  - Remove default <a> element blue color and underlines
+*/
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+
