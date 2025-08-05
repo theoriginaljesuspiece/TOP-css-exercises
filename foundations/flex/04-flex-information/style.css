@@ -10,6 +10,30 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  /*
+    - No need to add this into a flex as it is only a single text.
+      Just align it as an inline element with text-align
+  */
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+/*
+  - Wrapped all content inside a div to apply flexbox
+*/
+.content {
+  display: flex;
+  gap: 52px;
+  justify-content: center;
+}
+
+/*
+  - Wrapped the img and div elements inside a class to apply
+    inline align property
+*/
+.item {
+  width: 200px;
+  text-align: center;
 }
 
 /* do not edit this footer */
