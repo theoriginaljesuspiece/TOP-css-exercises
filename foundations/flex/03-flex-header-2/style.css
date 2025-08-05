@@ -12,6 +12,25 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  /*
+    - Applied flex to container
+    - Aligned on cross axis
+    - Spaced out on the main axis
+  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+/*
+  - Applied flex to new header containers (makes it easier to space the content)
+*/
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .profile-image {
@@ -20,6 +39,10 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  /*
+    - To prevent the profile picture from shrinking
+  */
+  flex-shrink: 0;
 }
 
 .logo {
@@ -45,4 +68,13 @@ a {
 
 ul {
   list-style-type: none;
+  /*
+    - Applied flex
+    - Removed padding and margin
+    - Applied gap
+  */
+  display: flex;
+  padding: 0;
+  margin: 0px;
+  gap: 16px;
 }
